@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url,include
+# from login import *
+# from cresch import *
+# from joinsch import *
+# from hostsch import *
+# from notify import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+#     url(r'^login/',include('login.urls')),
+#     url(r'^cresch/',include('cresch.urls')),
+#     url(r'^joinsch/',include('joinsch.urls')),
+#     url(r'^hostsch/',include('hostsch.urls')),
+#     url(r'^notify/',include('notify.urls')), 
 ]
