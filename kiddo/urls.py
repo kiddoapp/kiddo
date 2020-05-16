@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
+from cresch import views
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    re_path(r'^api/students/$', views.students_list),
+    re_path(r'^api/students/P[0-9]/$', views.students_detail),
 ]
+
+# re_path(r'^date_and_time/plus/\d{1,2}/$', hours_ahead),
